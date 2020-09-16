@@ -33,34 +33,3 @@ class LeakageInspector:
 		leakage = len(patients_in_both_groups) >= 1  # boolean (true if there is at least 1 patient in both groups)
 
 		return leakage
-
-
-print("Test Case 1")
-
-df1 = pd.DataFrame({'patient_id': [0, 1, 2]})
-df2 = pd.DataFrame({'patient_id': [2, 3, 4]})
-
-leakageinspector = LeakageInspector(df1, df2, 'patient_id')
-print(f'This is df1 {df1}')
-print("-------------------------------------")
-print(f'This is df2 {df2}')
-print(f"leakage output: {leakageinspector.check_for_leakage()}")
-print("-------------------------------------")
-
-
-print("-------------------------------------")
-print("-------------------------------------")
-print("-------------------------------------")
-
-print("Test Case 2")
-
-
-df1 = pd.DataFrame({'patient_id': [0, 1, 2]})
-df2 = pd.DataFrame({'patient_id': [3, 4, 5]})
-
-leakageinspector = LeakageInspector(df1, df2, 'patient_id')
-print(f'This is df1 {df1}')
-print("-------------------------------------")
-print(f'This is df2 {df2}')
-print(f"leakage output: {leakageinspector.check_for_leakage()}")
-print("-------------------------------------")
